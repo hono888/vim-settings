@@ -1,14 +1,14 @@
 "----------------------------------------
 " plugin - NeoBundle
 "----------------------------------------
-set nocompatible
-filetype off
+set nocompatible               " Be iMproved
+filetype off                   " Required!
 
 if has('vim_starting')
-  set runtimepath+='~/.vim/neobundle.vim.git'
-
-  call neobundle#rc(expand('~/.bundle'))
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/tpope/vim-repeat.git'
