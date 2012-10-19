@@ -18,3 +18,8 @@ Bundle 'vim-scripts/surround.vim'
 " ...
 
 filetype plugin indent on     " required!
+
+" vim-ruby
+filetype on
+filetype indent on
+filetype plugin on
