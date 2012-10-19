@@ -1,25 +1,27 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+"----------------------------------------
+" plugin - NeoBundle
+"----------------------------------------
+set nocompatible
+filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has('vim_starting')
+  set runtimepath+='~/.vim/neobundle.vim.git'
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+  call neobundle#rc(expand('~/.bundle'))
+endif
 
-" My Bundles here:
-"
-Bundle 'Shougo/unite.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/surround.vim'
-" ...
+NeoBundle 'git://github.com/tpope/vim-surround.git'
+NeoBundle 'git://github.com/tpope/vim-repeat.git'
+NeoBundle 'git://github.com/Shougo/clang_complete.git'
+NeoBundle 'git://github.com/Shougo/echodoc.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/Shougo/vim-vcs.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
+NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundle 'git://github.com/Shougo/vinarise.git'
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 
-filetype plugin indent on     " required!
-
-" vim-ruby
-filetype on
-filetype indent on
 filetype plugin on
+filetype indent on
